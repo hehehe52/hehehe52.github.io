@@ -23,7 +23,18 @@ function getInputValueFunction() {
         this.remove(); 
     }; 
 
-    document.getElementById("list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
-
+    document.getElementById("list").append(addListNode); //appends the itemnode to the unordered list with the ID "list"
 };
 
+//add accordions for better readability
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++){
+    acc[i].addEventListener("click", function() {
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "none")
+            panel.style.display = "block";
+        else panel.style.display = "none"
+    })
+}
