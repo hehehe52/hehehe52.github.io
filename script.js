@@ -23,5 +23,6 @@ function getInputValueFunction() {
         this.remove(); 
     }; */
 
-    document.getElementById("list").append(addListNode); //appends the itemnode to the unordered list with the ID "list"
+    document.getElementById("list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
+
 };
