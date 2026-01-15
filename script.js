@@ -19,10 +19,11 @@ function getInputValueFunction() {
     addListNode.append(addNoCheckbox); //append nocheckbox element to list element
 
 
-    /*addListNode.onclick = function() { //when the itemnode is clicked, it is removed from the list
+    addListNode.onclick = function() { //when the itemnode is clicked, it is removed from the list
         this.remove(); 
-    }; */
+    }; 
 
     document.getElementById("list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
 
 };
+
