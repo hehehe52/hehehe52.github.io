@@ -21,8 +21,12 @@
 }
 
 /* changes css when viewed on phone */
+
 @media (max-width: 600px) {
     .accordion {
         width:9px;
+    }
+    body {
+        background-color: blue;
     }
 }
