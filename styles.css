@@ -17,4 +17,12 @@
   background-color: white;
   display: none;
   overflow: hidden;
-} 
+
+}
+
+/* changes css when viewed on phone */
+@media (max-width: 600px) {
+    .accordion {
+        width:9px;
+    }
+}
