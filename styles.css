@@ -3,21 +3,22 @@
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding:18px;
-  width: 50%;
-  text-align: left;
+  padding-bottom:18px;
+  padding-top:18px;
+  width: 100%;
+  text-align: center;
   border-width: 0px;
   border-bottom-width: thin;
   outline: none;
   transition: 0.4s;
   position: relative;
-  left: 24%
+  
 }
 
 .accordion:after {
     content: '+';
     position: absolute;
-    left: 97%;
+    left: 93%;
     font-size: 1;
 }
 
@@ -51,16 +52,12 @@
     
 }
 
-.container {
+#list-container {
     display: flex;
     justify-content: center;
-    
 }
 
-.list-container {
-    display: flex;
-    justify-content: left;
-}
+
 
 .active::after {
     content: '-' ;
