@@ -1,6 +1,6 @@
 //addListNode is an element node that is used as a list item
 
-//when add button is pressed, this function is called and it creates a element node and a text node, adds 
+/*when add button is pressed, this function is called and it creates a element node and a text node, adds 
 function getInputValueFunction() {
     let addListNode = document.createElement("li"); //creates itemnode as a list item
     
@@ -24,17 +24,62 @@ function getInputValueFunction() {
     }; 
 
     document.getElementById("list").append(addListNode); //appends the itemnode to the unordered list with the ID "list"
-};
+}; */
+
+//add button + modal logic
+//set listener for button click. on button click unhide modal
+/*const modal = document.getElementById("modal");
+const btn = document.getElementById("modal-button");
+const confirmBtn = document.getElementById("modal-save-button");
+const closeBtn = document.getElementById("modal-close-button"); 
+btn.addEventListener("click", function () {
+    modal.style.display = "block"; 
+})*/
+
+//button + modal logic using querySelector method
+const modalDialog = document.querySelector("#taskModal");
+const showModal = document.querySelector("#modal-button");
+const closeModal = document.querySelector("#modal-close-button")
+const list = document.querySelector("#list")
+const input = document.querySelector("#modal-text-box")
+
+//open modal on click
+showModal.addEventListener("click", function() {
+    modalDialog.showModal();
+    modalDialog.returnValue = "";
+});
+
+//close modal on click x button
+closeModal.addEventListener("click", function() {
+    modalDialog.close();
+});
+
+//check if return value of modal is 'save', means user wants to add new item, so we add the entry into the list
+modalDialog.addEventListener("close", function() {
+
+
+    if (modalDialog.returnValue === 'save') {
+        const text = input.value;
+
+        const addListNode = document.createElement("li");
+        addListNode.append(text);
+
+        document.querySelector("#list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
+    } 
+});
+
+
 
 //add accordions for better readability
-var acc = document.getElementsByClassName("accordion");
-var i;
+const acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++){
     acc[i].addEventListener("click", function() {
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "none")
-            panel.style.display = "block";
-        else panel.style.display = "none"
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block")
+            panel.style.display = "none";
+        else panel.style.display = "block";
     })
-}
+};

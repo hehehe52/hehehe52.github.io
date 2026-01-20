@@ -3,12 +3,22 @@
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
+  padding:18px;
+  width: 50%;
   text-align: left;
-  border: none;
+  border-width: 0px;
+  border-bottom-width: thin;
   outline: none;
   transition: 0.4s;
+  position: relative;
+  left: 24%
+}
+
+.accordion:after {
+    content: '+';
+    position: absolute;
+    left: 97%;
+    font-size: 1;
 }
 
 /* Style the accordion panel and hides it upon loading. panel.style.display = "block" overrides this and causes it to appear */
@@ -17,17 +27,70 @@
   background-color: white;
   display: none;
   overflow: hidden;
+} 
+
+@media (max-width: 600px) {
+    
+    }
+
+#addnewtask-input {
+    padding: 1%;
+    border-radius: 50px;
+    padding-left:5px;
+    width: 35%;
+    
+}
+
+#modal-button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 3rem;
+    bottom: 2rem;
+    border-radius: 1000px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.list-container {
+    display: flex;
+    justify-content: left;
+}
+
+.active::after {
+    content: '-' ;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.5);
+}
+
+#modal-input {
+    margin-left: 45%;
+    margin-top: 15%;
 
 }
 
-/* changes css when viewed on phone
+#modal-save-button {
+    width:20px;
+    height:20px;
+    border-radius:1000px;
+}
 
-@media (max-width: 600px) {
-    .accordion {
-        width:9px;
-    }
-    body {
-        background-color: blue;
-    }
-} */
+#modal-close-button {
+    float: right;
+
+}
 

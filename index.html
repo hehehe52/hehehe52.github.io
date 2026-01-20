@@ -6,10 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <label 
-        for="addnewtask-input">Add New Task:</label>
-        <input type="text" id="addnewtask-input" placeholder="Add New Task">
-        <button onclick="getInputValueFunction()">Add</button>
+        <div class=container>
+        
+        <button id=modal-button>+</button>
+        </div>  
+        <div id=list-container>
         <ol id="list">
             <button class="accordion">Entrance</button>
             <div class="panel">
@@ -32,16 +33,10 @@
                     Is the doorstop loose or missing? <input type="checkbox"> <input type="checkbox">
                 </li>
                 <li>
-                    Is the peephole secure <input type="checkbox"> <input type="checkbox">
-                </li>
-                <li>
                     Are the main switch, leakage protection, and circuit breakers normal? <input type="checkbox"> <input type="checkbox">
                 </li>
                 <li>
                     Are all socket/switch panels loose or damaged? <input type="checkbox"> <input type="checkbox">
-                </li>
-                <li>
-                    Lighting status at the entrance <input type="checkbox"> <input type="checkbox">
                 </li>
             </div>
             <button class="accordion">Kitchen</button>
@@ -137,7 +132,7 @@
                     Bed / Mattress <input type="checkbox"> <input type="checkbox">
                 </li>
                 <li>
-                    Wardrobe (Clothes hanging rod / Dust cloth / Cloth hanging rod) <input type="checkbox"> <input type="checkbox">
+                    Wardrobe (Clothes hanging rod / Dust cloth / Cloth hanging rod) <input type="checkbox"> <input type="checkbox"> 
                 </li>
                 <li>
                     Shelf (For Optical Modem/Router / Bedside shelf) <input type="checkbox"> <input type="checkbox">
@@ -177,12 +172,25 @@
                 </li>
             </div>
         </ol>
-    </body>
-    <script 
+    </div>
+    <dialog id="taskModal">
+        <div id="modal-content"></div>
+        <form method="dialog">
+            <button value="close" id="modal-close-button">&times;</button>
+            <input id="modal-text-box" type="text" placeholder="Add New Task">
+            <button value="save" id="modal-save-button">Save</button>
+        </form>
+    </dialog>
+   <!---- <div id=modal>
+        <div id=modal-input>
+            <input type="text" placeholder="Add New Task">
+            <span id="modal-close-button">x</span>
+            <button id="modal-save-button"></button>
+        </div>
+    </div> -->
+    </body>     
+    <script
     src="script.js"></script>
 </html>
-
-
-
 
 
