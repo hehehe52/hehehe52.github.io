@@ -12,7 +12,6 @@
   outline: none;
   transition: 0.4s;
   position: relative;
-  
 }
 
 .accordion:after {
@@ -22,13 +21,26 @@
     font-size: 1;
 }
 
+/* Assign the after psuedoclass to any elements with .active class, which happens to be all accordion buttons after they are activated.*/
+.active::after { 
+    content: '-' ;
+}
+
 /* Style the accordion panel and hides it upon loading. panel.style.display = "block" overrides this and causes it to appear */
 .panel {
   padding: 0 18px;
   background-color: white;
   display: none;
   overflow: hidden;
-} 
+}
+
+
+
+li {
+    display:grid;
+    grid-template-columns: 1fr 160px;
+    grid-template-rows:50px; ;
+}
 
 @media (max-width: 600px) {
     
@@ -55,12 +67,6 @@
 #list-container {
     display: flex;
     justify-content: center;
-}
-
-
-
-.active::after {
-    content: '-' ;
 }
 
 #modal {
