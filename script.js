@@ -41,31 +41,38 @@ const modalDialog = document.querySelector("#taskModal");
 const showModal = document.querySelector("#modal-button");
 const closeModal = document.querySelector("#modal-close-button")
 const list = document.querySelector("#list")
-const input = document.querySelector("#modal-text-box")
+const taskNameInput = document.querySelector("#modal-task-name-input")
 
 //open modal on click
 showModal.addEventListener("click", function() {
     modalDialog.showModal();
     modalDialog.returnValue = "";
+    console.log(modalDialog.returnValue)
+    // this line clears the value in returnValue property of modalDialog element. 
+    // this clears the value before each input attempt into the modal. hacky fix to ensure old DOM data gets cleared
 });
 
 //close modal on click x button
-closeModal.addEventListener("click", function() {
+/*closeModal.addEventListener("close", function() {
     modalDialog.close();
-});
+}); */
 
 //check if return value of modal is 'save', means user wants to add new item, so we add the entry into the list
 modalDialog.addEventListener("close", function() {
 
 
     if (modalDialog.returnValue === 'save') {
-        const text = input.value;
+        let text = taskNameInput.value;
+        console.log("User saved")
+
 
         const addListNode = document.createElement("li");
         addListNode.append(text);
 
         document.querySelector("#list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
-    } 
+    } else {
+        console.log("User pressed esc or cancel")
+    }   
 });
 
 

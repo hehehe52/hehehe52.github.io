@@ -94,13 +94,29 @@ li {
 }
 
 #modal-save-button {
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     border-radius:1000px;
+    margin-left: 50px; /*create some space between the save and close button */
 }
 
 #modal-close-button {
-    float: right;
-
+    width:30px;
+    height:30px;
+    border-radius:1000px;
 }
 
+#taskModal {
+    height: 30%;
+}
+
+.modal-close-save-div {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
