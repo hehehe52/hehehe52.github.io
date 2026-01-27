@@ -62,17 +62,26 @@ modalDialog.addEventListener("close", function() {
 
 
     if (modalDialog.returnValue === 'save') {
-        let text = taskNameInput.value;
+        let text = taskNameInput.value.trim(); //use trim function to get rid of spaces around the text
         console.log("User saved")
 
-
+        
+        const targetList = document.querySelector("#list-entrance-additional"); //target the <ol> element with id=list-entrance-additional
         const addListNode = document.createElement("li");
-        addListNode.append(text);
+        const uniqueID = Date.now();
+        
+        addListNode.innerHTML = `
+                            <span>${text}</span> 
+                            <span>
+                                <label for="${uniqueID}yes">Yes</label> <input type="radio" id="${uniqueID}yes" name="${uniqueID}" value="Yes">
+                                <label for="${uniqueID}no">No</label> <input type="radio" id="${uniqueID}no" name="${uniqueID}" value="No">
+                                <label for="${uniqueID}NIL">NIL</label> <input type="radio" id="${uniqueID}NIL" name="${uniqueID}" value="NIL">
+                            </span>
+        `;
 
-        document.querySelector("#list").append(addListNode); //appends the itemnode to the ordered list with the ID "list"
-    } else {
-        console.log("User pressed esc or cancel")
-    }   
+        targetList.append(addListNode);
+
+    }
 });
 
 
