@@ -2,23 +2,20 @@
 <html lang="en-US">
     <head>
         <title>Ziroom Todo List</title>
-        <link rel="stylesheet" href="styles.css">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->    
+        <link rel="stylesheet" href="styles.css">  
     </head>
     <body>
-    
-        <div id="accordion-container">
-            <button id=modal-button>+</button>
-            
+        <h2>Current Room: <span id="room-number-display">Not Set</span></h2> <!--Not Set will disappear because of .textContent = roomNumberInput.value, setting the value to that variable-->
 
-            <div id=list-container-entrance>
-                <button class="accordion">Entrance</button>
+        <form id="inspection-form">
+            <div id="accordion-container"> 
+                <button type="button" class="accordion">Entrance</button>
                 <div class="panel">
-                    <ol id="list">
+                    <ol>
                         <li>
-                            <span>Entrance glue marks (Front of door / Back of door / Furniture)</span> <!--TODO:match for,id, name variables in label tag to their respective qn-->
+                            <span>Entrance glue marks (Front of door / Back of door / Furniture)</span>
                             <span>
-                                <label for="1yes">Yes</label> <input type="radio" id="1yes" name="question 1" value="Yes">
+                                <label for="1yes">Yes</label> <input type="radio" id="1yes" name="question 1" value="Yes" required>
                                 <label for="1no">No</label> <input type="radio" id="1no" name="question 1" value="No">
                                 <label for="1NIL">NIL</label><input type="radio" id="1NIL" name="question 1" value="NIL">
                             </span>
@@ -26,7 +23,7 @@
                         <li>
                             <span>Door gap size (Add weather stripping/seal)</span> 
                             <span>
-                                <label for="2yes">Yes</label> <input type="radio" id="2yes" name="question 2" value="Yes">
+                                <label for="2yes">Yes</label> <input type="radio" id="2yes" name="question 2" value="Yes"required>
                                 <label for="2no">No</label> <input type="radio" id="2no" name="question 2" value="No">
                                 <label for="2NIL">NIL</label> <input type="radio" id="2NIL" name="question 2" value="NIL">
                             </span>
@@ -34,7 +31,7 @@
                         <li>
                             <span>Is the keypad lock opening smoothly? / Battery status</span> 
                             <span>
-                                <label for="3yes">Yes</label> <input type="radio" id="3yes" name="question 3" value="Yes">
+                                <label for="3yes">Yes</label> <input type="radio" id="3yes" name="question 3" value="Yes"required>
                                 <label for="3no">No</label> <input type="radio" id="3no" name="question 3" value="No">
                                 <label for="3NIL">NIL</label> <input type="radio" id="3NIL" name="question 3" value="NIL">
                             </span>
@@ -42,7 +39,7 @@
                         <li>
                             <span>Is the door handle loose? / Can it be deadbolted from inside?</span> 
                             <span>
-                                <label for="4yes">Yes</label> <input type="radio" id="4yes" name="question 4" value="Yes">
+                                <label for="4yes">Yes</label> <input type="radio" id="4yes" name="question 4" value="Yes" required>
                                 <label for="4no">No</label> <input type="radio" id="4no" name="question 4" value="No">
                                 <label for="4NIL">NIL</label> <input type="radio" id="4NIL" name="question 4" value="NIL">
                             </span>
@@ -50,7 +47,7 @@
                         <li>
                             <span>Noise when opening/closing door (Hinges) / Surface cleanliness</span> 
                             <span>
-                                <label for="5yes">Yes</label> <input type="radio" id="5yes" name="question 5" value="Yes">
+                                <label for="5yes">Yes</label> <input type="radio" id="5yes" name="question 5" value="Yes" required>
                                 <label for="5no">No</label> <input type="radio" id="5no" name="question 5" value="No">
                                 <label for="5NIL">NIL</label> <input type="radio" id="5NIL" name="question 5" value="NIL">
                             </span>
@@ -58,7 +55,7 @@
                         <li>
                             <span>Is the doorstop loose or missing?</span> 
                             <span>
-                                <label for="6yes">Yes</label> <input type="radio" id="6yes" name="question 6" value="Yes">
+                                <label for="6yes">Yes</label> <input type="radio" id="6yes" name="question 6" value="Yes" required>
                                 <label for="6no">No</label> <input type="radio" id="6no" name="question 6" value="No">
                                 <label for="6NIL">NIL</label> <input type="radio" id="6NIL" name="question 6" value="NIL">
                             </span>
@@ -66,7 +63,7 @@
                         <li>
                             <span>Peephole secure?</span> 
                             <span>
-                                <label for="7yes">Yes</label> <input type="radio" id="7yes" name="question 7" value="Yes">
+                                <label for="7yes">Yes</label> <input type="radio" id="7yes" name="question 7" value="Yes" required>
                                 <label for="7no">No</label> <input type="radio" id="7no" name="question 7" value="No">
                                 <label for="7NIL">NIL</label> <input type="radio" id="7NIL" name="question 7" value="NIL">
                             </span>
@@ -74,7 +71,7 @@
                         <li>
                             <span>Are the main switch, leakage protection, and circuit breakers normal?</span> 
                             <span>
-                                <label for="8yes">Yes</label> <input type="radio" id="8yes" name="question 8" value="Yes">
+                                <label for="8yes">Yes</label> <input type="radio" id="8yes" name="question 8" value="Yes" required>
                                 <label for="8no">No</label> <input type="radio" id="8no" name="question 8" value="No">
                                 <label for="8NIL">NIL</label> <input type="radio" id="8NIL" name="question 8" value="NIL">
                             </span>
@@ -82,7 +79,7 @@
                         <li>
                             <span>Are all socket/switch panels loose or damaged?</span> 
                             <span>
-                                <label for="9yes">Yes</label> <input type="radio" id="9yes" name="question 9" value="Yes">
+                                <label for="9yes">Yes</label> <input type="radio" id="9yes" name="question 9" value="Yes" required>
                                 <label for="9no">No</label> <input type="radio" id="9no" name="question 9" value="No">
                                 <label for="9NIL">NIL</label> <input type="radio" id="9NIL" name="question 9" value="NIL">
                             </span>
@@ -90,399 +87,407 @@
                         <li>
                             <span>Lights at the entrance ok?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
+                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes" required>
                                 <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
                                 <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
                             </span>
                         </li>
                     </ol>
                 </div>
-            </div>
+            
 
-            <div id="list-container-kitchen">
-                <button class="accordion">Kitchen</button>
+            
+                <button type ="button" class="accordion">Kitchen</button>
                 <div class="panel">
                     <ol>
                         <li>
                             <span>Range hood (Oil cup / Functionality / Cleanliness)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="11yes">Yes</label> <input type="radio" id="11yes" name="question 11" value="Yes" required>
+                                <label for="11no">No</label> <input type="radio" id="11no" name="question 11" value="No">
+                                <label for="11NIL">NIL</label> <input type="radio" id="11NIL" name="question 11" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Kitchen cabinet doors opening/closing noise / Do they close properly?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="12yes">Yes</label> <input type="radio" id="12yes" name="question 12" value="Yes" required>
+                                <label for="12no">No</label> <input type="radio" id="12no" name="question 12" value="No">
+                                <label for="12NIL">NIL</label> <input type="radio" id="12NIL" name="question 12" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Vanity mirror water marks / stains</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="13yes">Yes</label> <input type="radio" id="13yes" name="question 13" value="Yes" required>
+                                <label for="13no">No</label> <input type="radio" id="13no" name="question 13" value="No">
+                                <label for="13NIL">NIL</label> <input type="radio" id="13NIL" name="question 13" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Mirror cabinet opening/closing noise</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="14yes">Yes</label> <input type="radio" id="14yes" name="question 14" value="Yes" required>
+                                <label for="14no">No</label> <input type="radio" id="14no" name="question 14" value="No">
+                                <label for="14NIL">NIL</label> <input type="radio" id="14NIL" name="question 14" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Entrance sink (Faucet loose? / Leaking? / Drainage smooth?)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="15yes">Yes</label> <input type="radio" id="15yes" name="question 15" value="Yes" required>
+                                <label for="15no">No</label> <input type="radio" id="15no" name="question 15" value="No">
+                                <label for="15NIL">NIL</label> <input type="radio" id="15NIL" name="question 15" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Waterproof box for socket near entrance sink (On countertop / Under sink)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="16yes">Yes</label> <input type="radio" id="16yes" name="question 16" value="Yes" required>
+                                <label for="16no">No</label> <input type="radio" id="16no" name="question 16" value="No">
+                                <label for="16NIL">NIL</label> <input type="radio" id="16NIL" name="question 16" value="NIL">
                             </span> 
                         </li>
                     </ol>
                 </div>
-            </div>
+            
                 <!--Bathroom accordion-->
-            <div id="list-container-bathroom">
-                <button class="accordion">Bathroom</button>
+            
+                <button type="button" class="accordion">Bathroom</button>
                 <div class="panel">
-                    <ol id="list-entrance-bathroom">
+                    <ol>
                         <li>
                             <span>Bathroom door opening/closing/locking normal? / Handle loose?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="17yes">Yes</label> <input type="radio" id="17yes" name="question 17" value="Yes" required>
+                                <label for="17no">No</label> <input type="radio" id="17no" name="question 17" value="No">
+                                <label for="17NIL">NIL</label> <input type="radio" id="17NIL" name="question 17" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Bathroom switch / Panel loose?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="18yes">Yes</label> <input type="radio" id="18yes" name="question 18" value="Yes" required>
+                                <label for="18no">No</label> <input type="radio" id="18no" name="question 18" value="No">
+                                <label for="18NIL">NIL</label> <input type="radio" id="18NIL" name="question 18" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>All areas in the bathroom require waterproof boxes (covers).</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="19yes">Yes</label> <input type="radio" id="19yes" name="question 19" value="Yes" required>
+                                <label for="19no">No</label> <input type="radio" id="19no" name="question 19" value="No">
+                                <label for="19NIL">NIL</label> <input type="radio" id="19NIL" name="question 19" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Bathroom lights (General light, Number of broken heater bulbs, Heater light / Strip light under mirror)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="20yes">Yes</label> <input type="radio" id="20yes" name="question 20" value="Yes" required>
+                                <label for="20no">No</label> <input type="radio" id="20no" name="question 20" value="No">
+                                <label for="20NIL">NIL</label> <input type="radio" id="20NIL" name="question 20" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Is the bathroom heater exhaust fan working normally?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="21yes">Yes</label> <input type="radio" id="21yes" name="question 21" value="Yes" required>
+                                <label for="21no">No</label> <input type="radio" id="21no" name="question 21" value="No">
+                                <label for="21NIL">NIL</label> <input type="radio" id="21NIL" name="question 21" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Toilet (Flush button / Seat secure / Drainage / Odor)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="22yes">Yes</label> <input type="radio" id="22yes" name="question 22" value="Yes" required>
+                                <label for="22no">No</label> <input type="radio" id="22no" name="question 22" value="No">
+                                <label for="22NIL">NIL</label> <input type="radio" id="22NIL" name="question 22" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Floor drain (Odor / Backflow smell when flushing toilet)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="23yes">Yes</label> <input type="radio" id="23yes" name="question 23" value="Yes" required>
+                                <label for="23no">No</label> <input type="radio" id="23no" name="question 23" value="No">
+                                <label for="23NIL">NIL</label> <input type="radio" id="23NIL" name="question 23" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Is floor drain drainage smooth?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="24yes">Yes</label> <input type="radio" id="24yes" name="question 24" value="Yes" required>
+                                <label for="24no">No</label> <input type="radio" id="24no" name="question 24" value="No">
+                                <label for="24NIL">NIL</label> <input type="radio" id="24NIL" name="question 24" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Shower (Shower base / Is hose leaking?)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="25yes">Yes</label> <input type="radio" id="25yes" name="question 25" value="Yes" required>
+                                <label for="25no">No</label> <input type="radio" id="25no" name="question 25" value="No">
+                                <label for="25NIL">NIL</label> <input type="radio" id="25NIL" name="question 25" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Corner metal shelf / Towel rack / Wooden shelf secure?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="26yes">Yes</label> <input type="radio" id="26yes" name="question 26" value="Yes" required>
+                                <label for="26no">No</label> <input type="radio" id="26no" name="question 26" value="No">
+                                <label for="26NIL">NIL</label> <input type="radio" id="26NIL" name="question 26" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Missing shower curtain / Tension rod?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="27yes">Yes</label> <input type="radio" id="27yes" name="question 27" value="Yes" required>
+                                <label for="27no">No</label> <input type="radio" id="27no" name="question 27" value="No">
+                                <label for="27NIL">NIL</label> <input type="radio" id="27NIL" name="question 27" value="NIL">
                             </span> 
                         </li>
                         <li>
                             <span>Bathroom sink (Faucet loose? / Leaking? / Drainage smooth? / Hardware missing/error?)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="28yes">Yes</label> <input type="radio" id="28yes" name="question 28" value="Yes" required>
+                                <label for="28no">No</label> <input type="radio" id="28no" name="question 28" value="No">
+                                <label for="28NIL">NIL</label> <input type="radio" id="28NIL" name="question 28" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Tiles / Wall corner tiles damaged?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="29yes">Yes</label> <input type="radio" id="29yes" name="question 29" value="Yes" required>
+                                <label for="29no">No</label> <input type="radio" id="29no" name="question 29" value="No">
+                                <label for="29NIL">NIL</label> <input type="radio" id="29NIL" name="question 29" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Are wall/floor tiles loose or hollow?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="30yes">Yes</label> <input type="radio" id="30yes" name="question 30" value="Yes" required>
+                                <label for="30no">No</label> <input type="radio" id="30no" name="question 30" value="No">
+                                <label for="30NIL">NIL</label> <input type="radio" id="30NIL" name="question 30" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Water heater hot/cold water normal? / Mixing valve</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="31yes">Yes</label> <input type="radio" id="31yes" name="question 31" value="Yes" required>
+                                <label for="31no">No</label> <input type="radio" id="31no" name="question 31" value="No">
+                                <label for="31NIL">NIL</label> <input type="radio" id="31NIL" name="question 31" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Washing machine (Button response / Detergent box cleanliness / Odor)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="32yes">Yes</label> <input type="radio" id="32yes" name="question 32" value="Yes" required>
+                                <label for="32no">No</label> <input type="radio" id="32no" name="question 32" value="No">
+                                <label for="32NIL">NIL</label> <input type="radio" id="32NIL" name="question 32" value="NIL">
                             </span>
                         </li>
                     </ol>
                 </div>
-            </div>
+            
                 <!--Living room accordion-->
-            <div id="list-container-living-room">
-                <button class="accordion">Living Room</button>
+            
+                <button type="button" class="accordion">Living Room</button>
                 <div class="panel">
                     <ol>
                         <li>
                             <span>Full-length mirror water marks / stains / damage</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="33yes">Yes</label> <input type="radio" id="33yes" name="question 33" value="Yes" required>
+                                <label for="33no">No</label> <input type="radio" id="33no" name="question 33" value="No">
+                                <label for="33NIL">NIL</label> <input type="radio" id="33NIL" name="question 33" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Refrigerator (Cleanliness / Odor / Missing accessories)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="34yes">Yes</label> <input type="radio" id="34yes" name="question 34" value="Yes" required>
+                                <label for="34no">No</label> <input type="radio" id="34no" name="question 34" value="No">
+                                <label for="34NIL">NIL</label> <input type="radio" id="34NIL" name="question 34" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Bedroom lighting (Ceiling lamp, Downlight, Spotlight)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="35yes">Yes</label> <input type="radio" id="35yes" name="question 35" value="Yes" required>
+                                <label for="35no">No</label> <input type="radio" id="35no" name="question 35" value="No">
+                                <label for="35NIL">NIL</label> <input type="radio" id="35NIL" name="question 35" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Wall surface (Colored wall / White wall)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="36yes">Yes</label> <input type="radio" id="36yes" name="question 36" value="Yes" required>
+                                <label for="36no">No</label> <input type="radio" id="36no" name="question 36" value="No">
+                                <label for="36NIL">NIL</label> <input type="radio" id="36NIL" name="question 36" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Sofa (Damage / Cleanliness)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="37yes">Yes</label> <input type="radio" id="37yes" name="question 37" value="Yes" required>
+                                <label for="37no">No</label> <input type="radio" id="37no" name="question 37" value="No">
+                                <label for="37NIL">NIL</label> <input type="radio" id="37NIL" name="question 37" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Bed / Mattress</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="38yes">Yes</label> <input type="radio" id="38yes" name="question 38" value="Yes" required>
+                                <label for="38no">No</label> <input type="radio" id="38no" name="question 38" value="No">
+                                <label for="38NIL">NIL</label> <input type="radio" id="38NIL" name="question 38" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Wardrobe (Clothes hanging rod / Dust cloth / Cloth hanging rod)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="39yes">Yes</label> <input type="radio" id="39yes" name="question 39" value="Yes" required>
+                                <label for="39no">No</label> <input type="radio" id="39no" name="question 39" value="No">
+                                <label for="39NIL">NIL</label> <input type="radio" id="39NIL" name="question 39" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Shelf (For Optical Modem/Router / Bedside shelf)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="40yes">Yes</label> <input type="radio" id="40yes" name="question 40" value="Yes" required>
+                                <label for="40no">No</label> <input type="radio" id="40no" name="question 40" value="No">
+                                <label for="40NIL">NIL</label> <input type="radio" id="40NIL" name="question 40" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Are desk legs wobbly?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="41yes">Yes</label> <input type="radio" id="41yes" name="question 41" value="Yes" required>
+                                <label for="41no">No</label> <input type="radio" id="41no" name="question 41" value="No">
+                                <label for="41NIL">NIL</label> <input type="radio" id="41NIL" name="question 41" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Are chair legs wobbly?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="42yes">Yes</label> <input type="radio" id="42yes" name="question 42" value="Yes" required>
+                                <label for="42no">No</label> <input type="radio" id="42no" name="question 42" value="No">
+                                <label for="42NIL">NIL</label> <input type="radio" id="42NIL" name="question 42" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Windows (Open/close noise / Smoothness?)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="43yes">Yes</label> <input type="radio" id="43yes" name="question 43" value="Yes" required>
+                                <label for="43no">No</label> <input type="radio" id="43no" name="question 43" value="No">
+                                <label for="43NIL">NIL</label> <input type="radio" id="43NIL" name="question 43" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Screen window (Damaged? / Sliding smoothly?)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="44yes">Yes</label> <input type="radio" id="44yes" name="question 44" value="Yes" required>
+                                <label for="44no">No</label> <input type="radio" id="44no" name="question 44" value="No">
+                                <label for="44NIL">NIL</label> <input type="radio" id="44NIL" name="question 44" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Baseboard area (Missing / Loose)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="45yes">Yes</label> <input type="radio" id="45yes" name="question 45" value="Yes" required>
+                                <label for="45no">No</label> <input type="radio" id="45no" name="question 45" value="No">
+                                <label for="45NIL">NIL</label> <input type="radio" id="45NIL" name="question 45" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>WIFI connection</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="46yes">Yes</label> <input type="radio" id="46yes" name="question 46" value="Yes" required>
+                                <label for="46no">No</label> <input type="radio" id="46no" name="question 46" value="No">
+                                <label for="46NIL">NIL</label> <input type="radio" id="46NIL" name="question 46" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>AC/TV Remote Control (Buttons / AC response / Surface cleanliness)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="47yes">Yes</label> <input type="radio" id="47yes" name="question 47" value="Yes" required>
+                                <label for="47no">No</label> <input type="radio" id="47no" name="question 47" value="No">
+                                <label for="47NIL">NIL</label> <input type="radio" id="47NIL" name="question 47" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>AC filter / Vent / Surface cleanliness / Can the fan close?</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="48yes">Yes</label> <input type="radio" id="48yes" name="question 48" value="Yes" required>
+                                <label for="48no">No</label> <input type="radio" id="48no" name="question 48" value="No">
+                                <label for="48NIL">NIL</label> <input type="radio" id="48NIL" name="question 48" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Any spiderwebs in room corners? / No obvious trash or stains on the floor</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="49yes">Yes</label> <input type="radio" id="49yes" name="question 49" value="Yes" required>
+                                <label for="49no">No</label> <input type="radio" id="49no" name="question 49" value="No">
+                                <label for="49NIL">NIL</label> <input type="radio" id="49NIL" name="question 49" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Flooring (Damaged / Dirty / Warped or lifting)</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="50yes">Yes</label> <input type="radio" id="50yes" name="question 50" value="Yes" required>
+                                <label for="50no">No</label> <input type="radio" id="50no" name="question 50" value="No">
+                                <label for="50NIL">NIL</label> <input type="radio" id="50NIL" name="question 50" value="NIL">
                             </span>
                         </li>
                         <li>
                             <span>Smoke detector / Sprinkler head</span> 
                             <span>
-                                <label for="10yes">Yes</label> <input type="radio" id="10yes" name="question 10" value="Yes">
-                                <label for="10no">No</label> <input type="radio" id="10no" name="question 10" value="No">
-                                <label for="10NIL">NIL</label> <input type="radio" id="10NIL" name="question 10" value="NIL">
+                                <label for="51yes">Yes</label> <input type="radio" id="51yes" name="question 51" value="Yes" required>
+                                <label for="51no">No</label> <input type="radio" id="51no" name="question 51" value="No">
+                                <label for="51NIL">NIL</label> <input type="radio" id="51NIL" name="question 51" value="NIL">
                             </span>
                         </li>
                     </ol>
                 </div>
-            </div>
-            <div id="list-container-additional">
-                <button class="accordion">Additional</button>
+            
+            
+                <button type="button" class="accordion">Additional</button>
                 <div class="panel">
-                    <ol id="list-entrance-additional">
-                        
+                    <ol id="list-additional">
+
                     </ol>
-                </div>
+                </div>    
             </div>
-        </div>
-        <!--Modal popup-->
+            <!--Submit btn-->
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+
+        <!--Add new task Modal popup-->
+        <button id=modal-button>+</button>
+
         <dialog id="taskModal">
             <form method="dialog" class="modal-form">
                 <label for="modal-task-name-input">Enter task name:</label>
-                <input id="modal-task-name-input" type="text" placeholder="Add New Task" required>
+                <input id="modal-task-name-input" type="text" placeholder="Add New Task">
 
-                <label for="modal-task-category-dropdown">Enter task category:</label>
+        <!---<label for="modal-task-category-dropdown">Enter task category:</label>
                 <select id="modal-task-category-dropdown" required>
                     <option value="Housekeeping">Housekeeping</option>
                     <option value="Maintainence">Maintainence</option>
-                </select>
+                </select> -->
                 <div class="modal-close-save-div">
                     <button value="close" id="modal-close-button">&times;</button>
                     <button value="save" id="modal-save-button">&check;</button>
                 </div>
             </form>
         </dialog>
-    <!---- <div id=modal>
-            <div id=modal-input>
-                <input type="text" placeholder="Add New Task">
-                <span id="modal-close-button">x</span>
-                <button id="modal-save-button"></button>
-            </div>
-        </div> -->
+
+        <dialog id="room-number-modal">
+            <form method="dialog">
+                <h3>Start Inspection</h3>
+                <label for="room-number-input">Enter Room Number:</label>
+                <input id="room-number-input" type="number" placeholder="0000" required>
+
+                <button value="confirm">Start</button>
+            </form>
+        </dialog>
     </body>     
     <script
     src="script.js"></script>
