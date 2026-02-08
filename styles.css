@@ -23,7 +23,7 @@
 }
 
 /* Assign the after psuedoclass to any elements with .active class, which happens to be all accordion buttons after they are activated.*/
-.active::after { 
+.active:after { 
     content: '-' ;
 }
 
@@ -35,13 +35,20 @@
   overflow: visible;
 }
 
+.panel label {
+    font-size: larger;
+}
 
 li {
     display:grid;
-    grid-template-columns: 500px 180px;
+    grid-template-columns: 500px 200px;
     grid-template-rows:100px; ;
 }
 
+input[type=radio] {
+    width: 20px;
+    height:20px;
+}
 
 #addnewtask-input {
     padding: 1%;
@@ -52,11 +59,11 @@ li {
 }
 
 #modal-button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     position: fixed;
     right: 3rem;
-    bottom: 2rem;
+    bottom: 5rem;
     border-radius: 1000px;
     
 }
@@ -72,8 +79,8 @@ li {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; 
+    height: 100%; 
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -109,4 +116,32 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+#submit-btn {
+    position: fixed; /* Pins the button to the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Spans the full width of the phone */
+    padding: 20px; /* Large touch target */
+    background-color: green; /* A standard "Success" green */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    z-index: 1000; /* Ensures it sits on top of other content */
+}
+
+#submit-btn:hover {
+    background-color: darkgreen;
+}
+
+#submit-btn:active{
+    background-color:#094405;
+}
+
+/* Add padding to the body so the content doesn't get hidden behind the button */
+body {
+    padding-bottom: 80px; 
 }
