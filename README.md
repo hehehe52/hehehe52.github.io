@@ -2,7 +2,7 @@ Ziroom Room Inspection Web App
 
 This web application is designed to simplify room inspections at the  Ziroom apartment complex. The app provides a structured checklist for inspectors to go through different areas of a room and record their findings.
 
-The application is built using HTML, CSS, and vanilla JavaScript, and is connected to a Google Sheets backend via Google Apps Script to automatically note down inspection items that have failed inspection (all inspection items that have the 'No' option checked are added to the Google sheets as they have failed inspection. Inspection items that have the 'Yes' or 'NIL' option selected do not need any further follow up, thus the data is not stored.
+The application is built using HTML, CSS, and vanilla JavaScript, and is connected to a Google Sheets backend via Google Apps Script to automatically note down inspection items that have failed inspection. All inspection items that have the 'No' option checked are added to the Google sheets as they have failed inspection. Inspection items that have the 'Yes' or 'NIL' option selected do not need any further follow up, thus the data is not stored.
 
 System Architecture
 
