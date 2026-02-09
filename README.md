@@ -18,12 +18,12 @@ How the Application Works
 1. Start Inspection – Room Number Input
 
     When the app loads, a modal dialog prompts the inspector to enter the room number.
-  
-  The room number is displayed at the top of the page
-  
-  This ensures every inspection is clearly associated with a specific room before the checklist begins
+   
+    The room number is displayed at the top of the page
+   
+    This ensures every inspection is clearly associated with a specific room before the checklist begins
 
-2. Accordion-Based Inspection Sections
+3. Accordion-Based Inspection Sections
 
   The inspection checklist is divided into expandable accordion sections:
 
