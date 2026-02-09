@@ -98,7 +98,7 @@ inspectionForm.addEventListener("submit", function(e) {
 });
 
 function sendBatchToGoogle(putReportDataHere) { //putReportDataHere is where reportData is supposed to go when using the sendBatchToGoogle func
-    const URL = "https://script.google.com/macros/s/AKfycbyR_slhptgyCwRUKGsE4PA86uecD9XiGn5lrjCBzbqww_qJ-hHXCPgjc6dgFjdN4hHGKQ/exec"
+    const URL = "https://script.google.com/macros/s/AKfycbwZsTYw5Ldzqa61J4A_fnqu0eZmEhvFhUiEhEPMJ_BhsRsLDdbWT5OLHo__qWbI6FF-xw/exec"
 
     fetch(URL, {
         method: "POST",
