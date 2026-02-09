@@ -17,63 +17,65 @@ Google Sheets (data storage)
 How the Application Works
 1. Start Inspection – Room Number Input
 
-When the app loads, a modal dialog prompts the inspector to enter the room number.
-
-The room number is displayed at the top of the page
-
-This ensures every inspection is clearly associated with a specific room before the checklist begins
+  When the app loads, a modal dialog prompts the inspector to enter the room number.
+  
+  The room number is displayed at the top of the page
+  
+  This ensures every inspection is clearly associated with a specific room before the checklist begins
 
 2. Accordion-Based Inspection Sections
 
-The inspection checklist is divided into expandable accordion sections:
+  The inspection checklist is divided into expandable accordion sections:
 
-Entrance
+    Entrance
 
-Kitchen
+    Kitchen
 
-Bathroom
+    Bathroom
 
-Living Room
+    Living Room
 
-Additional (custom tasks)
+    Additional (custom tasks)
 
-This keeps the interface uncluttered and easy to navigate during real inspections.
+  This keeps the interface uncluttered and easy to navigate during real inspections.
 
 3. Structured Checklist with Radio Buttons
 
-Each inspection item is presented as a question with three responses:
+  Each inspection item is presented as a question with three responses:
 
-Yes
+    Yes
 
-No
+    No
 
-NIL
+    NIL
 
-All questions are marked as required, ensuring:
+  All questions are marked as required, ensuring:
 
-No inspection item can be skipped
+    No inspection item can be skipped
 
-Every inspection is complete and consistent
+    Every inspection is complete and consistent
 
 4. Adding Custom Inspection Tasks
+  
+  A floating “+” button allows inspectors to add additional inspection items dynamically.
 
-A floating “+” button allows inspectors to add additional inspection items dynamically.
+  These tasks appear under the Additional section
 
-These tasks appear under the Additional section
-
-This provides flexibility for unusual issues not covered in the standard checklist
+  This provides flexibility for unusual issues not covered in the standard checklist
 
 5. Submission and Automatic Data Storage
 
-When the inspector presses Submit:
+  When the inspector presses Submit:
 
-The form data is collected by JavaScript
+  The form data is collected by JavaScript
 
-The data is sent to a Google Apps Script web endpoint
+  The data is sent to a Google Apps Script web endpoint
 
-The Apps Script processes the request
+  The Apps Script processes the request
 
-The inspection results are written into a Google Sheet
+  The inspection results are written into a Google Sheet
+
+  An Apps Script sorts the results by room number
 
 This removes the need for manual data entry and creates a centralized inspection record system.
 
