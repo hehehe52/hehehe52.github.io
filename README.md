@@ -17,11 +17,11 @@ Google Sheets (data storage)
 How the Application Works
 1. Start Inspection – Room Number Input
 
-    When the app loads, a modal dialog prompts the inspector to enter the room number.
+When the app loads, a modal dialog prompts the inspector to enter the room number.
    
-    The room number is displayed at the top of the page
+The room number is displayed at the top of the page
    
-    This ensures every inspection is clearly associated with a specific room before the checklist begins
+This ensures every inspection is clearly associated with a specific room before the checklist begins
 
 3. Accordion-Based Inspection Sections
 
