@@ -1,0 +1,24 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  var data = JSON.parse(e.postData.contents); //e is name of the data sent from the website to the excel. postdata is the container, contents contains a string that .parse method parses into JSON.
+
+  data.forEach(function(item) { //function within a function
+    sheet.appendRow([new Date(), item.room, item.task, item.status]);
+  });
+
+  sortByRoomNumber(sheet);
+
+  return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+}
+
+function sortByRoomNumber(sheet) {
+
+  const lastRow = sheet.getLastRow();
+  const lastCol = sheet.getLastColumn();
+
+  // select the entire spreadsheet, EXCEPT the first row (header row)
+  const range = sheet.getRange(2, 1, lastRow - 1, lastCol);
+  //sorts the selected area by the room number in the second column, in ascending order
+  range.sort({ column: 2, ascending: true });
+}
