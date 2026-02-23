@@ -75,7 +75,7 @@ This ensures every inspection is clearly associated with a specific room before 
 
   The inspection results are written into a Google Sheet
 
-  An Apps Script sorts the results by room number
+  An Apps Script sorts the results by room number (App script source code can be found in the repo)
 
 This removes the need for manual data entry and creates a centralized inspection record system.
 
